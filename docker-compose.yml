@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  group2_app:
+    build: .
+    ports:
+      - "8084:80"
+    volumes:
+      - /c/xampp/htdocs/group2/src:/var/www/html
