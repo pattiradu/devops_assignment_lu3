@@ -6,7 +6,8 @@
     <title>Registration</title>
 </head>
 <body>
-    <h1>Registration</h1>
+    <h1>Registration page</h1>
+
     <form method="POST" action="register_user.php">
         <label for="firstname">First Name:</label>
         <input type="text" name="firstname" required><br>
