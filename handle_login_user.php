@@ -1,20 +1,16 @@
 <?php
-// Start session to manage user login
 session_start();
 
-// Include your database connection file
 include 'db_connection.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Retrieve form data
+    
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    // Sanitize inputs to prevent SQL injection
     $email = mysqli_real_escape_string($conn, $email);
     $password = mysqli_real_escape_string($conn, $password);
-
-    // SQL query to check if the user exists
+   
     $sql = "SELECT * FROM tbl_users WHERE user_email = '$email' AND user_password = '$password'";
     $result = mysqli_query($conn, $sql);
 
