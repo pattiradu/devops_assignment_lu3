@@ -3,12 +3,26 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Build stage is running'
+                script {
+                    def stageType = "Build"
+                    echo "${stageType} stage is running"
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                script {
+                    def stageType = "Test"
+                    echo "${stageType} stage is running"
+                }
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploy stage is running'
+                script {
+                    def stageType = "Deploy"
+                    echo "${stageType} stage is running"
+                }
             }
         }
     }
